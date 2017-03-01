@@ -22,7 +22,7 @@ public class FrameReceiver {
         FileChannelWrapper ch = null;
         try {
             ch = NIOUtils.readableFileChannel(file);
-            return ((FrameGrab) new FrameGrab(ch).seekToSecondPrecise(sec)).getFrame();
+            return ((FrameGrab) new FrameGrab(ch).seekToSecondPrecise(sec)).getFrame();//Error SPot
         } finally {
             NIOUtils.closeQuietly(ch);
         }
