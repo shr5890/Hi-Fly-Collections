@@ -22,7 +22,7 @@ public class FrameReceiver {
         FileChannelWrapper ch = null;
         try {
             ch = NIOUtils.readableFileChannel(file);
-            return ((FrameGrab) new FrameGrab(ch).seekToSecondPrecise(sec)).getFrame();//getFrame method doesnt exist in 0.1.9
+            return ((FrameGrab) new FrameGrab(ch).seekToSecondPrecise(sec)).getFrame();//Error Spot - getFrame method doesnt exist in 0.1.9
         } finally {
             NIOUtils.closeQuietly(ch);
         }
