@@ -19,20 +19,12 @@ public class FrameReceiver {
 		ImageIO.write(frame, "png", new File("frame_150.png"));
 	}
 	public static BufferedImage getFrame(File file, double sec) throws IOException, JCodecException {
-        FileChannelWrapper ch = null;
-        try {
-            ch = NIOUtils.readableFileChannel(file);
-            return ((FrameGrab) new FrameGrab(ch).seekToSecondPrecise(sec)).getFrame();//Error - getFrame method doesnt exist in 0.1.9
-        } finally {
-            NIOUtils.closeQuietly(ch);
-        }
-    }
-//	public static void initialize(File file) throws IOException, JCodecException {
-//		   FileChannelWrapper ch = NIOUtils.readableFileChannel(file);
-//		   grab = new FrameGrab(ch);
-//		}
-//
-//		public static BufferedImage getFrame(double second) {
-//		   return ((FrameGrab) grab.seekToSecondPrecise(second)).getFrame();
-//		}
+		FileChannelWrapper ch = null;
+		try {
+			ch = NIOUtils.readableFileChannel(file);
+			return ((FrameGrab) new FrameGrab(ch).seekToSecondPrecise(sec)).getFrame();//Error Spot - getFrame method doesnt exist in 0.1.9
+		} finally {
+			NIOUtils.closeQuietly(ch);
+		}
+	}
 }
