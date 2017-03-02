@@ -56,6 +56,7 @@ public class ColorDecoder{
 //					int rgb = new Color(brImage.getRGB(x, y)).getRGB();
 //					 pixel = brImage.getRaster().getPixel(x, y, new int[3]);
 					 rgbData = brImage.getRGB(0,0, brImage.getWidth(), brImage.getHeight(),null, 0,brImage.getWidth());
+					 System.out.println("Image Decoded");
 //					 int colorRed=(rgbData[(y*brImage.getWidth())+x] >> 16) & 0xFF; 
 //
 //					 int colorGreen=(rgbData[(y*brImage.getWidth())+x] >> 8) & 0xFF; 
@@ -78,12 +79,16 @@ public class ColorDecoder{
 //		int intHeight = color[0].length;
 		BufferedImage img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 		int i = 0;
-		for(int x = 0 ; x < width ; x++){
-			for(int y = 0 ; y < height ; y++){
-				img.setRGB(x, y, rgb[i]);
-				i++;
-			}
-		}
+		img.setRGB(0, 0, width, height, rgb, 0, width);
+//		for(int x = 0 ; x < width ; x++){
+//			for(int y = 0 ; y < height ; y++){
+//				img.setRGB(x, y, rgb[i]);
+//				i++;
+//			}
+//		}
+//		for(int x = 0 ; x < width * height ; x++){
+//			
+//		}
 		ColorEncoder.createImage(img);
 		}catch(IOException e){
 			e.printStackTrace();
@@ -147,10 +152,9 @@ public class ColorDecoder{
 	public Color[][] getColor(){
 		Color[][] colors = null;
 		try{
-			File file = new File("C:\\Users\\413455\\Pictures\\TestNG 2.jpg");
+			File file = new File("C:\\Users\\Admin\\Pictures\\ImageCreator\\custom1.jpg");
 //			colors  = retrieveColor(file);
 			encodeColor(retrieveColor2(file));
-//			retrieveColor2(file);
 		}catch(Exception e){
 			e.printStackTrace();
 		}

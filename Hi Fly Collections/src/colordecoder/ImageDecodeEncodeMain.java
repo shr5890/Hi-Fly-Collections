@@ -16,7 +16,7 @@ public class ImageDecodeEncodeMain {
 		ColorDecoder CR = new ColorDecoder();
 		ColorEncoder CE = new ColorEncoder();
 		Color[][] color = CR.getColor();
-		CE.encodeColor(color);
+//		CE.encodeColor(color);
 		System.out.println(strStartDate);
 		System.out.println(getCurrentDateandTime());
 	}
