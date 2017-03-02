@@ -25,8 +25,8 @@ public class ColorEncoder {
 			e.printStackTrace();
 		}
 	}
-	public void createImage(BufferedImage img) throws IOException{
-		File outputFile = new File("C:\\Users\\Admin\\Pictures\\ImageCreator\\sampleoutput.jpg");
+	public static void createImage(BufferedImage img) throws IOException{
+		File outputFile = new File("C:\\Users\\413455\\Pictures\\sampleoutput.jpg");
 		ImageIO.write(img, "jpg", outputFile);
 		System.out.println("Image Created");
 	}

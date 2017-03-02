@@ -13,7 +13,7 @@ import org.bytedeco.javacpp.opencv_core.IplImage;
 public class VideoConverter {
 	Java2DFrameConverter JFC = new Java2DFrameConverter();
 	public void convertVideo() throws Exception, IOException{
-		FFmpegFrameGrabber g = new FFmpegFrameGrabber("C:\\Users\\Admin\\Documents\\Video Converter\\custom.mp4");
+		FFmpegFrameGrabber g = new FFmpegFrameGrabber("C:\\Users\\Public\\Videos\\Sample Videos\\Wildlife.wmv");
 		g.start();
 		IplImage j;
 		for (int i = 0 ; i < 50 ; i++) {

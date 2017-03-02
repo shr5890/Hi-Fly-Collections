@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class ImageDecodeEncodeMain {
 	public static String getCurrentDateandTime(){
-		SimpleDateFormat DateFormat = new SimpleDateFormat("dd/MM/YYYY HH:mm:ss");
+		SimpleDateFormat DateFormat = new SimpleDateFormat("dd.MM.YYYY_HH.mm.ss");
 		Date date = new Date();
 		String strCurrentDate = DateFormat.format(date);
 		return strCurrentDate;
