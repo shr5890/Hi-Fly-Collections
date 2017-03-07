@@ -152,7 +152,7 @@ public class ColorDecoder{
 	public Color[][] getColor(){
 		Color[][] colors = null;
 		try{
-			File file = new File("C:\\Users\\Admin\\Pictures\\ImageCreator\\custom1.jpg");
+			File file = new File("images\\Jellyfish.jpg");
 //			colors  = retrieveColor(file);
 			encodeColor(retrieveColor2(file));
 		}catch(Exception e){
