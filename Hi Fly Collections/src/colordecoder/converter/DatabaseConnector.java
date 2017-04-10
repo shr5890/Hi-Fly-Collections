@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class DatabaseConnector {
  
     public static void main(String[] args) throws ClassNotFoundException {
-        String url = "jdbc:mysql://localhost:3306/contactdb";
+        String url = "jdbc:oracle:thin://0.0.0.0:135:xe";
         String user = "root";
         String password = "secret";
  

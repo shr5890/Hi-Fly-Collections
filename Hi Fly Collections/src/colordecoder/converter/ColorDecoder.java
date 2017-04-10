@@ -29,6 +29,13 @@ public class ColorDecoder{
 		try{
 			File file = new File("images\\"+FileName);
 			rgb = retrieveColor2(file);
+//			ArraySpliter AS = new ArraySpliter();
+//			UserDefinedReturns UDR= AS.splitArray(rgb);
+//			System.out.println("===============================================");
+//			System.out.println("Array Length --> "+UDR.splitArrayContents.length*2147483647);
+//			System.out.println("===============================================");
+//			System.out.println("Array Length --> "+UDR.lastArrayContents.length);
+//			System.out.println("===============================================");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
