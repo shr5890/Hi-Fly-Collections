@@ -39,7 +39,7 @@ public class ImageDecodeEncodeMain {
 		ColorEncoder CE = new ColorEncoder();
 		String StartDate = getCurrentDateandTime();
 		System.out.println("Start Date & Time : "+StartDate);
-		int[] rgb = CR.getColor("Penguins.jpg");
+		int[] rgb = CR.getColor("Tulips.jpg");
 		CE.encodeColor(rgb);
 		String EndDate = getCurrentDateandTime();
 		System.out.println("End Date & Time : "+EndDate);

@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 public class TextToGraphics {
 
     public static void main(String[] args) {
-        String text = "Hello";
+        String text = "Shaikh Hifzur Rahman Mansoor";
 
         /*
            Because font metrics is based on a graphics context, we need to create

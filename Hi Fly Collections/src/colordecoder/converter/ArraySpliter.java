@@ -1,23 +1,23 @@
 package colordecoder.converter;
 
 public class ArraySpliter {
-	public UserDefinedReturns splitArray(int[] arrContents){
-		int arrayCount = arrContents.length/2147483647;
-		boolean splitarray = arrContents.length/2147483647 >= 1;
-		boolean lastArray = arrContents.length%2147483647 != 0;
-		int[][] splitArrayContents = new int[arrayCount][2147483647];
-		int[] lastArrayContents = new int[arrContents.length%2147483647];
+	public UserDefinedReturns splitArray(int[] arrContents, int splitLength){
+		int arrayCount = arrContents.length/splitLength;
+		boolean splitarray = arrContents.length/splitLength >= 1;
+		boolean lastArray = arrContents.length%splitLength != 0;
+		int[][] splitArrayContents = new int[arrayCount][splitLength];
+		int[] lastArrayContents = new int[arrContents.length%splitLength];
 		if(splitarray){
 			for(int i = 0; i < arrayCount; i++){
-				for(int j = 0; j < 2147483647; j++){
-					int temp = i*2147483647 + j;
+				for(int j = 0; j < splitLength; j++){
+					int temp = i*splitLength + j;
 					splitArrayContents[i][j] = arrContents[temp];
 				}
 			}
 		}
 		if(splitarray && lastArray){
 			for(int i = 0; i < lastArrayContents.length; i++){
-				int temp = arrayCount*2147483647 + i;
+				int temp = arrayCount*splitLength + i;
 				lastArrayContents[i] = arrContents[temp];
 			}
 		}else if(lastArray){
@@ -44,9 +44,10 @@ public class ArraySpliter {
 	public static void main(String args[]){
 		ArraySpliter AS = new ArraySpliter();
 		int[] arrContents = {2,3,4,6,8,1,2,3,4,7,9,5};
-		UserDefinedReturns UDR= AS.splitArray(arrContents);
+		int splitLength = 2147483647;
+		UserDefinedReturns UDR= AS.splitArray(arrContents, splitLength);
 		System.out.println("===============================================");
-		System.out.println("Array Length --> "+UDR.splitArrayContents.length*2147483647);
+		System.out.println("Array Length --> "+UDR.splitArrayContents.length*splitLength);
 		for(int i = 0; i < UDR.splitArrayContents.length; i++){
 			printArray(UDR.splitArrayContents[i]);
 		}

@@ -5,6 +5,10 @@
 	<classpathentry kind="lib" path="Jars/javacv-1.2.jar"/>
 	<classpathentry kind="lib" path="Jars/opencv-3.1.0-1.2.jar"/>
 	<classpathentry kind="lib" path="Jars/jcodec-0.1.9.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_60"/>
+	<classpathentry kind="lib" path="Jars/cassandra-driver-core-3.1.4.jar"/>
+	<classpathentry kind="lib" path="Jars/cassandra-driver-mapping-2.1.5.jar"/>
+	<classpathentry kind="lib" path="Jars/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="Jars/selenium-server-standalone-2.47.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_121"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
