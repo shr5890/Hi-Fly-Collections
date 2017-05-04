@@ -4,9 +4,7 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.io.Writer;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.TreeMap;
 
 import javax.imageio.ImageIO;
